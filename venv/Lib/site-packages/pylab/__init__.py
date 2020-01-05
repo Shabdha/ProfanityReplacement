@@ -1,0 +1,6 @@
+"""
+pylab
+~~~~~~
+
+The pylab package.
+"""
