@@ -1,11 +1,29 @@
 from tkinter import*
 from tkinter import ttk
 from tkinter import filedialog
+from tkinter import messagebox
 from pygame import mixer
+
+
+import thinkdsp
+import thinkplot
+import numpy as np
+from scipy.interpolate import interp1d
+import matplotlib.pyplot as plt
+from scipy.fftpack import fft
+from scipy.io import wavfile
+from pydub import AudioSegment
+
+
+#our files imports
+import Preprocessing as pr
+import transcribe_enhanced_model as tr
 
 
 root = Tk()
 mixer.init()
+
+# import file
 
 
 def browse_file():
@@ -13,7 +31,26 @@ def browse_file():
     filename = filedialog.askopenfilename()
     print(filename)
 
+    # Audio preprocessing
+    pr.noise_reductionM1(filename)
+    # conversion from other formats to wav
 
+
+def analyse():
+    path=filename
+    tr.transcribe_file_with_enhanced_model(path, "ta-LK")
+    '''try:
+        if Tamil:
+            tr.transcribe_file_with_enhanced_model(path,"ta-LK")
+        elif English:
+            tr.transcribe_file_with_enhanced_model(path,"en-US")
+        elif Sinhala:
+            tr.transcribe_file_with_enhanced_model(path,"si-LK")
+        else:
+            messagebox.showinfo("Language Error", "Select a language to Analyse")
+    except:
+        messagebox.showinfo("Language Error", "Select a language to Analyse")
+'''
 def play_music():
 
   try:
@@ -21,14 +58,15 @@ def play_music():
 
   except NameError:
     try:
-     mixer.music.load(filename)
-     mixer.music.play()
+        mixer.music.load(filename)
+        mixer.music.play()
 
     except:
-     tkinter.messagebox.showerror("error")
+        messagebox.showerror("error")
 
   else:
     mixer.music.unpause()
+
 
 
 def stop_music():
@@ -55,6 +93,7 @@ def rewind_music():
 
 def doaction():
     print("action")
+
 
 root.title("Shabdha- Automatic Audio Replacement Tool")
 root.geometry("750x560")
@@ -95,16 +134,16 @@ helpMenu.add_command(label="Help?", command=doaction)
 
 button1 = Button(text='Add', fg='white', bg='green', font=10, command=browse_file).place(x=55, y=50)
 button2 = Button(text='Remove', fg='white', bg='orange', font=10).place(x=120, y=50)
-button3 = Button(text='Analyse', fg='white', bg='green', font=10).place(x=650, y=500)
+button3 = Button(text='Analyse', fg='white', bg='green', font=10, command=analyse).place(x=650, y=500)
 
 
 # *********** radio ********************************************************
 theLabel = Label(root, text="Language").place(x=100, y=300)
 
 r =IntVar()
-Radiobutton(root, text='Tamil', variable=r, value=1).place(x=100, y=320)
-Radiobutton(root, text='Sinhala', variable=r, value=2).place(x=100, y=340)
-Radiobutton(root, text='English', variable=r, value=3).place(x=100, y=360)
+Tamil = Radiobutton(root, text='Tamil', variable=r, value=1).place(x=100, y=320)
+Sinhala = Radiobutton(root, text='Sinhala', variable=r, value=2).place(x=100, y=340)
+English = Radiobutton(root, text='English', variable=r, value=3).place(x=100, y=360)
 
 # *******************check boxes ***********************************************
 
@@ -151,3 +190,4 @@ mixer.music.set_volume(0.7)
 scale.place(x=420, y=200)
 
 root.mainloop()
+filename="blood_audio.wav"
