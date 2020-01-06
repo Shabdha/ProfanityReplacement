@@ -6,15 +6,15 @@ import matplotlib.pyplot as plt
 from scipy.fftpack import fft
 from scipy.io import wavfile # get the api
 
-audio = thinkdsp.read_wave("audio6.wav")
+audio = thinkdsp.read_wave("blood_audio.wav")
 # plot the wave of the input audio
 audio.plot()
-# thinkplot.show()
+thinkplot.show()
 
 audio_spec = audio.make_spectrum()
 # get the spectrum of the input audio
 audio_spec.plot()
-# thinkplot.show()
+thinkplot.show()
 
 audio_spec.low_pass(cutoff=230, factor=0.01)
 # Apply low pass filter for the spectrum to filter out the audio into an audible range.
@@ -29,7 +29,7 @@ wave.play('test6_1.wav')
 low_wave = wave.make_spectrum()
 # spectrum after first low pass filter is applied
 low_wave.plot()
-# thinkplot.show()
+thinkplot.show()
 
 low_wave.high_pass(cutoff=80, factor=0.01)
 # Apply high pass filter for the low passed spectrum to get into an audible range.
