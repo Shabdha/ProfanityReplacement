@@ -18,6 +18,7 @@ from pydub import AudioSegment
 #our files imports
 import Preprocessing as pr
 import transcribe_enhanced_model as tr
+import NLP as nlp
 
 
 root = Tk()
@@ -35,10 +36,22 @@ def browse_file():
     pr.noise_reductionM1(filename)
     # conversion from other formats to wav
 
+def new_window1(words):
+    global win1
+    try:
+        if win1.state() == "normal": win1.focus()
+    except:
+        win1 = Toplevel()
+        win1.geometry("300x300+500+200")
+        win1["bg"] = "white"
+        lb = Label(win1, text=words)
+        lb.pack()
 
 def analyse():
     path=filename
-    tr.transcribe_file_with_enhanced_model(path, "ta-LK")
+    tr.transcribe_file_with_enhanced_model(path, "en-US")
+    words=nlp.profanity()
+    new_window1(words)
     '''try:
         if Tamil:
             tr.transcribe_file_with_enhanced_model(path,"ta-LK")
@@ -190,4 +203,11 @@ mixer.music.set_volume(0.7)
 scale.place(x=420, y=200)
 
 root.mainloop()
+
+
+
+
+
+
+
 filename="blood_audio.wav"

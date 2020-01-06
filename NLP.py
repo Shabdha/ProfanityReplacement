@@ -11,12 +11,7 @@ from sklearn.externals import joblib
 from sklearn.metrics import accuracy_score
 import codecs
 
-# def _get_profane_prob(prob):
-#   return prob[1]
-#
-#
-# def predict_prob(texts):
-#   return np.apply_along_axis(_get_profane_prob, 1, model.predict_proba(vectorizer.transform(texts)))
+file='transcript.txt'
 
 # Read in data
 data = pd.read_csv('clean_data.csv')
@@ -36,22 +31,62 @@ X_train, X_test,Y_train, Y_test=train_test_split(X, Y, test_size=0.25)
 # # #Save the modelm
 # joblib.dump(vectorizer, 'vectorizer.joblib')
 # joblib.dump(cclf, 'model.joblib')
-#
+
 # vectorizer = joblib.load(pkg_resources.resource_filename(__name__,'vectorizer.joblib'))
 # model = joblib.load(pkg_resources.resource_filename(__name__, 'model.joblib'))
 
-model = joblib.load('model.joblib')
-def predict(texts):
-  return model.predict(vectorizer.transform(texts))
-print(predict([
-    'dick',
-    'fuck you',
-    'Holy',
-    'nigger'
-  ]))
-prediction = model.predict(X_test)
-# plt.scatter(Y_test, prediction)
-# plt.show()
+model = joblib.load('model_37.joblib')
 
-print accuracy_score(Y_test, prediction)
+def read_in(file):
+    f=open(file, "r")
+    if f.mode=='r':
+        content=f.read()
+        return content
 
+def predict(content):
+  return model.predict(vectorizer.transform(content))
+
+# print(predict([
+#   'dick',
+#   'sacred',
+#   'bitch'
+# ]))
+
+# prediction = model.predict(X_test)
+# # plt.scatter(Y_test, prediction)
+# # plt.show()
+#
+# print(accuracy_score(Y_test, prediction))
+def profanity():
+    content= read_in(file)
+    #print(content)
+    words=content.split()
+    print(words)
+    analyzed=predict(words)
+    print(analyzed)
+    #print(analyzed[3])
+
+    ind=[]
+
+    j=0
+    inx = np.where(analyzed == 1)
+    array = np.arange(len(inx))
+    for element in inx:
+        print(element)
+
+    for x in range(len(inx)):
+        index2=inx[x]
+        data=words[index2]
+        ind.append(data)
+    return ind
+
+'''
+  index1=int(inx[j])
+            for i in index1:
+                data=words[i]
+                ind.append(data)
+            j=j+1'''
+
+
+# print(predict(words).index("1"))
+profanity()
