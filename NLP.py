@@ -68,16 +68,24 @@ def profanity():
 
     ind=[]
 
-    j=0
+
     inx = np.where(analyzed == 1)
     array = np.arange(len(inx))
-    for element in inx:
-        print(element)
 
-    for x in range(len(inx)):
-        index2=inx[x]
+
+    result = []
+
+    for t in inx:
+        for x in t:
+            result.append(x)
+    # for element in result:
+    #     print(element)
+    for x in range(len(result)):
+        index2=result[x]
         data=words[index2]
         ind.append(data)
+
+    print(ind)
     return ind
 
 '''
@@ -85,8 +93,8 @@ def profanity():
             for i in index1:
                 data=words[i]
                 ind.append(data)
-            j=j+1'''
+            j=j+1
+'''
 
-
+# profanity()
 # print(predict(words).index("1"))
-profanity()

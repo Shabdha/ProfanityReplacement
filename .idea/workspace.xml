@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fc25e37-07b7-4174-b1fc-591c4a0bad27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/result_window.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LowHighPass.wav" beforeDir="false" afterPath="$PROJECT_DIR$/LowHighPass.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NLP.py" beforeDir="false" afterPath="$PROJECT_DIR$/NLP.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NoiseLess.wav" beforeDir="false" afterPath="$PROJECT_DIR$/NoiseLess.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shabdha_gui_v1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Shabdha_gui_v1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/model.joblib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transcribe_enhanced_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/transcribe_enhanced_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/transcript.txt" beforeDir="false" afterPath="$PROJECT_DIR$/transcript.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vectorizer.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/vectorizer.joblib" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Shabdha_gui_v1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="391">
+              <caret line="23" column="11" lean-forward="true" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -53,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NLP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="91" column="11" lean-forward="true" selection-start-line="91" selection-start-column="11" selection-end-line="91" selection-end-column="11" />
+            <state relative-caret-position="248">
+              <caret line="77" column="17" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="17" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -66,10 +60,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sep.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/transcribe_enhanced_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+            <state relative-caret-position="78">
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
             </state>
           </provider>
         </entry>
@@ -117,14 +120,14 @@
         <option value="$PROJECT_DIR$/T.music1.py" />
         <option value="$USER_HOME$/Desktop/Python-Music-Player-master/main.py" />
         <option value="$PROJECT_DIR$/spectrum_T1.py" />
-        <option value="$PROJECT_DIR$/transcribe_enhanced_model.py" />
         <option value="$PROJECT_DIR$/result_window.py" />
         <option value="$PROJECT_DIR$/Shabdha_gui_v1.py" />
         <option value="$PROJECT_DIR$/NLP.py" />
+        <option value="$PROJECT_DIR$/transcribe_enhanced_model.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="315" />
     <option name="y" value="49" />
     <option name="width" value="1400" />
@@ -166,7 +169,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.NLP">
+  <component name="RunManager" selected="Python.Shabdha_gui_v1">
     <configuration name="NLP" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="gui_test" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -274,8 +277,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.NLP" />
         <item itemvalue="Python.Shabdha_gui_v1" />
+        <item itemvalue="Python.NLP" />
         <item itemvalue="Python.transcribe_enhanced_model" />
         <item itemvalue="Python.audio_spectrum" />
         <item itemvalue="Python.spectrum_T1" />
@@ -296,7 +299,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1264489" />
@@ -376,13 +379,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/transcribe_enhanced_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/result_window.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -390,22 +386,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Shabdha_gui_v1.py">
+    <entry file="file://$PROJECT_DIR$/transcribe_enhanced_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="78">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NLP.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="91" column="11" lean-forward="true" selection-start-line="91" selection-start-column="11" selection-end-line="91" selection-end-column="11" />
+        <state relative-caret-position="248">
+          <caret line="77" column="17" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="17" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shabdha_gui_v1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="11" lean-forward="true" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
